@@ -20,16 +20,17 @@
 			color: black;
 			font-family: 'Inconsolata', monospace;
 		}
+		body {
+			background-color: var(--bg-1);
+		}
 		#main {
 			height: 100vh;
 			width: auto;
-			background-color: var(--bg-1);
 			display: flex;
 			justify-content: space-around;
 			align-items: flex-start;
 		}
 		#presentation {
-			height: 100%;
 			display: flex;
 			flex-direction: column;
 			justify-content: space-between;
@@ -39,7 +40,7 @@
 		}
 		#img-ct {
 			height: auto;
-			width: 15vw;
+			width: 40%;
 			border-radius: 50%;
 			background-color: white;
 			box-shadow: 0 0 5px black;
@@ -51,8 +52,8 @@
 		}
 
 		.icon {
-			width: 2vw;
-			height: 2vw;
+			width: 60%;
+			height: 60%;
 		}
 		.glyph {
 			display: flex;
@@ -60,8 +61,8 @@
 			vertical-align: middle;
 			align-items: center;
 			background-color: var(--fg-1);
-			width: 3vw;
-			height: 3vw;
+			width: 4vh;
+			height: 4vh;
 			margin-left: 8pt;
 			border-radius: 5pt;
 			transition: background-color 300ms;
@@ -80,17 +81,13 @@
 			flex-shrink: 1;
 			width: 100%;
 		}
-		#pinfo-ct>h3{
-			font-size: 2.0vw;
-			font-weight: 100;
-			font-family: 'Open Sans', sans-serif;
-		}
 		h2 {
 			font-family: 'Open Sans', sans-serif;
+			font-size: 3vh;
 			font-weight: 100;
 		}
 		#works {
-			font-size: 1.3vw;
+			font-size: 2vh;
 		}
 		#works>*{
 			margin-bottom: 1em;
@@ -124,7 +121,7 @@
 				<img id="img-ct" src='https://avatars0.githubusercontent.com/u/8449810?s=460&u=5c659c21baabad6fdb15c678ed568168cae7ae23&v=4' alt='profile-picture'></img>
 				<div id="psocial">
 
-				<div id="pinfo-ct"><h3>Pedro Pinheiro</h3></div>
+				<div id="pinfo-ct"><h2>Pedro Pinheiro</h2></div>
 					<a href="https://github.com/pmop" target='_blank'>
 						<div class="glyph">
 							<svg class="icon">
