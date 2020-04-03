@@ -3,6 +3,10 @@
 	--bg-2: #ffc180;
 	--fg-1: #ffe6cc;
 	--fg-2: #fff3e6;
+	--sz-1: 2vh;
+	--sz-2: 3vh;
+	--sz-3: 4vh;
+	--flex-direction: column;
 }
 html, body, p, div, a, ul, li, h1, h2, h3, section {
 	padding: 0;
@@ -48,9 +52,8 @@ hr {
 #pinfo {
 	display: flex;
 	align-items: center;
-	margin-top: 2vh;
+	margin-top: var(--sz-1);
 }
-
 .icon {
 	width: 60%;
 	height: 60%;
@@ -61,8 +64,8 @@ hr {
 	vertical-align: middle;
 	align-items: center;
 	background-color: var(--fg-1);
-	width: 4vh;
-	height: 4vh;
+	width: var(--sz-3);
+	height: var(--sz-3);
 	margin-left: 8pt;
 	border-radius: 5pt;
 	transition: background-color 300ms;
@@ -76,13 +79,13 @@ hr {
 #container {
 	margin: 2em;
 	display: flex;
-	flex-direction: column;
+	flex-direction: var(--flex-direction);
 	justify-content: center;
 	width: 100%;
 }
 h2 {
 	font-family: 'Open Sans', sans-serif;
-	font-size: 3vh;
+	font-size: var(--sz-2);
 	font-weight: 100;
 }
 #works-content {
@@ -98,7 +101,22 @@ h2 {
 }
 
 .works-content-item {
-	font-size: 2vh;
+	font-size: var(--sz-1);
 	transition: padding-left 600ms;
-	margin-bottom: 2vh;
+	margin-bottom: var(--sz-1);
+}
+
+/* Media queries */
+
+@media (min-aspect-ratio: 4/3) {
+	:root {
+	--bg-1: #ffce99;
+	--bg-2: #ffc180;
+	--fg-1: #ffe6cc;
+	--fg-2: #fff3e6;
+	--sz-1: 1.5vw;
+	--sz-2: 2vw;
+	--sz-3: 3.5vw;
+	--flex-direction: row;
+}
 }
