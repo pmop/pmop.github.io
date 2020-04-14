@@ -66,26 +66,34 @@ hr {
 #pinfo {
 	display: flex;
 	align-items: center;
+	flex-direction: column;
 	margin-top: var(--sz-1);
 }
 .icon {
-	width: 60%;
-	height: 60%;
+	width: 3.5vh;
+	height: 3.5vh;
 }
 .glyph {
 	display: flex;
-	justify-content: center;
-	vertical-align: middle;
+	position: relative;
 	align-items: center;
-	background-color: var(--fg-3);
-	width: 10vh;
+	justify-content: space-around;
+	background-color: transparent;
+	border: 2px solid var(--teal);
+	width: 22vh;
 	height: 5vh;
-	margin-left: 8pt;
 	border-radius: 5pt;
-	transition: background-color 300ms;
+	color: var(--teal);
+	font-weight: 600;
+	transition: bottom 300ms;
+	transition-timing-function: ease-in-out;
+}
+.glyph>span {
+	font-size: var(--sz-1);
+	justify-self: start;
 }
 .glyph:hover {
-	background-color: var(--o-fg-2);
+	bottom: 1vh;
 }
 .glyph:active {
 	background-color: var(--bg-2);
@@ -110,7 +118,7 @@ h2 {
 .works-content-item>a {
 	word-wrap: break;
 }
-a:hover {
+.works-content-item>a:hover {
 	color: var(--highlight);
 	text-decoration: underline;
 }
@@ -125,23 +133,23 @@ a:hover {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	transition: all 0.3s cubic-bezier(.25,.8,.25,1);
   }
-  
+
   .card-1:hover {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  
+
   .card-2 {
 	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
   }
-  
+
   .card-3 {
 	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
   }
-  
+
   .card-4 {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
   }
-  
+
   .card-5 {
 	box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
   }
