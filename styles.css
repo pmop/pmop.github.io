@@ -24,6 +24,11 @@
 	--sz-photo: 40vw;
 	--flex-direction: column-reverse;
 }
+
+svg {
+	fill: var(--teal);
+}
+
 html, body, p, div, a, ul, li, h1, h2, h3, section {
 	padding: 0;
 	margin: 0;
