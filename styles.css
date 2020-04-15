@@ -26,7 +26,7 @@
 }
 
 svg {
-	fill: var(--teal);
+	fill: white;
 }
 
 html, body, p, div, a, ul, li, h1, h2, h3, section {
@@ -70,7 +70,6 @@ hr {
 }
 #pinfo {
 	display: flex;
-	align-items: center;
 	flex-direction: column;
 	margin-top: var(--sz-1);
 }
@@ -83,22 +82,25 @@ hr {
 	position: relative;
 	align-items: center;
 	justify-content: space-around;
-	background-color: transparent;
-	border: 2px solid var(--teal);
+	/*background-color: black;*/
+	background: rgb(56,56,56);
+	background: linear-gradient(0deg, rgba(56,56,56,1) 58%, rgba(113,109,109,1) 100%);
+	border: 1px solid #454545;
 	width: 22vh;
 	height: 5vh;
-	border-radius: 5pt;
+	border-radius: 25pt;
 	color: var(--teal);
-	font-weight: 600;
-	transition: bottom 300ms;
-	transition-timing-function: ease-in-out;
+	font-weight: 400;
+	font-family: 'Open Sans', sans-serif;
+	/*transition: bottom 300ms;
+	transition-timing-function: ease-in-out;*/
 }
 .glyph>span {
 	font-size: var(--sz-1);
+	color: white;
 	justify-self: start;
 }
 .glyph:hover {
-	bottom: 1vh;
 }
 .glyph:active {
 	background-color: var(--bg-2);
@@ -122,15 +124,39 @@ h2 {
 
 .works-content-item>a {
 	word-wrap: break;
+	position: relative;
+	color: #000;
 }
+
+.works-content-item>a:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: #000;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.3s ease-in-out 0s;
+	transition: all 0.3s ease-in-out 0s;
+}
+
 .works-content-item>a:hover {
-	color: var(--highlight);
+	color: #000;
 	text-decoration: underline;
+}
+
+.works-content-item>a:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
 }
 
 .works-content-item {
 	font-size: var(--sz-1);
-	transition: color 600ms;
+	/*transition: color 600ms;*/
 	margin-bottom: var(--sz-1);
 }
 
@@ -152,7 +178,13 @@ h2 {
   }
 
   .card-4 {
-	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+	/*box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);*/
+
+	box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+				0 2px 2px rgba(0,0,0,0.12),
+				0 4px 4px rgba(0,0,0,0.12),
+				0 8px 8px rgba(0,0,0,0.12),
+				0 16px 16px rgba(0,0,0,0.12);
   }
 
   .card-5 {
