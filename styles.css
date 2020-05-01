@@ -92,16 +92,13 @@ hr {
 	color: var(--teal);
 	font-weight: 400;
 	font-family: 'Open Sans', sans-serif;
-	/*transition: bottom 300ms;
-	transition-timing-function: ease-in-out;*/
 }
 .glyph>span {
 	font-size: var(--sz-1);
 	color: white;
 	justify-self: start;
 }
-.glyph:hover {
-}
+
 .glyph:active {
 	background-color: var(--bg-2);
 }
@@ -139,13 +136,12 @@ h2 {
 	visibility: hidden;
 	-webkit-transform: scaleX(0);
 	transform: scaleX(0);
-	-webkit-transition: all 0.3s ease-in-out 0s;
 	transition: all 0.3s ease-in-out 0s;
+	-webkit-transition: all 0.3s ease-in-out 0s;
 }
 
 .works-content-item>a:hover {
 	color: #000;
-	text-decoration: underline;
 }
 
 .works-content-item>a:hover:before {
